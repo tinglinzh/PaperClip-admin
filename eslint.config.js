@@ -4,6 +4,9 @@ import tailwind from 'eslint-plugin-tailwindcss'
 export default antfu(
   {
     react: true,
+    rules: {
+      'no-console': 'off',
+    },
   },
   ...tailwind.configs['flat/recommended'],
 )
