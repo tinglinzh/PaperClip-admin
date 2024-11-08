@@ -2,10 +2,10 @@ import app_en from '@/locales/app/en.json'
 import app_zhCN from '@/locales/app/zh-CN.json'
 
 const resources = {
-  en: {
+  'en': {
     app: app_en,
   },
-  zh_CN: {
+  'zh-CN': {
     app: app_zhCN,
   },
 }

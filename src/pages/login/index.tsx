@@ -3,7 +3,9 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export function Login() {
-  const { t } = useTranslation('app')
+  const { t, i18n } = useTranslation('app')
+  console.log(i18n.language)
+
   useEffect(() => {
     console.log(navigator.language)
   }, [])
