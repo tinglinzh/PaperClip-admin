@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react'
+import { Suspense } from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 import App from './app'
 import '@/assets/styles/main.css'
@@ -9,9 +9,7 @@ import '@/i18n'
 const rootElement = document.getElementById('root')!
 const root = ReactDOMClient.createRoot(rootElement)
 root.render(
-  <StrictMode>
-    <Suspense fallback="loading">
-      <App />
-    </Suspense>
-  </StrictMode>,
+  <Suspense fallback="loading">
+    <App />
+  </Suspense>,
 )

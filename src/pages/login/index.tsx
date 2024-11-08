@@ -1,10 +1,10 @@
 import paperclipIcon from '@/assets/images/paperclip.png'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CSSTransition } from 'react-transition-group'
 
 export function Login() {
-  const { t, i18n } = useTranslation('app')
-  console.log(i18n.language)
+  const { t } = useTranslation('app')
 
   useEffect(() => {
     console.log(navigator.language)
