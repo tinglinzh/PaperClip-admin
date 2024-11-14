@@ -1,3 +1,4 @@
+import NProgress from '@/components/progress'
 import { Suspense } from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 import App from './app'
@@ -9,7 +10,7 @@ import '@/i18n'
 const rootElement = document.getElementById('root')!
 const root = ReactDOMClient.createRoot(rootElement)
 root.render(
-  <Suspense fallback="loading">
+  <Suspense fallback={<NProgress />}>
     <App />
   </Suspense>,
 )
