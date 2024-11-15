@@ -1,9 +1,18 @@
 @import 'nprogress/nprogress.css';
+@import url('@/assets/styles/variables.css');
 
 #root {
      min-height: 100vh;
 }
+#root,body,html {
+  height: 100%;
+}
 
+.ant-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+}
 body {
      font-family:
           -apple-system, 'paperclip-PingFang',

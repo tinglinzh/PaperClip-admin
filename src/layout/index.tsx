@@ -5,8 +5,10 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons'
+import { Icon } from '@iconify/react'
 import { Button, Layout, Menu, theme } from 'antd'
 import React, { useState } from 'react'
+import SideTop from './components/side/sideTop'
 
 const { Header, Sider, Content } = Layout
 
@@ -18,11 +20,11 @@ const HomeLayout: React.FC = () => {
 
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical" />
+      <Sider trigger={null} collapsible collapsed={collapsed} className="shadow-[2px_0_8px_0_rgb(29,35,41,0.05);]">
+        <SideTop collapsed={collapsed} />
         <Menu
-          theme="dark"
           mode="inline"
+          className="!border-none"
           defaultSelectedKeys={['1']}
           items={[
             {
@@ -44,15 +46,19 @@ const HomeLayout: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <Header style={{ background: colorBgContainer }} className="flex items-center px-6">
           <Button
             type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            icon={collapsed
+              ? (
+                  <Icon icon="line-md:menu-fold-right" key="menu-fold-right" />
+                )
+              : (
+                  <Icon icon="line-md:menu-fold-left" key="menu-fold-left" />
+                )}
             onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: '16px',
-              width: 64,
-              height: 64,
+              fontSize: `var(--paperclip-header-icon-size)`,
             }}
           />
         </Header>
@@ -60,7 +66,6 @@ const HomeLayout: React.FC = () => {
           style={{
             margin: '24px 16px',
             padding: 24,
-            minHeight: '100vh',
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
           }}

@@ -1,0 +1,104 @@
+:root {
+  /* 基本颜色 */
+  --paperclip-primary-color: #1E90FF; /* 主要品牌色 */
+  --paperclip-secondary-color: #FF6347; /* 次要色 */
+  --paperclip-background-color: #f4f7fc; /* 背景色 */
+  --paperclip-text-color: #333; /* 文字颜色 */
+  --paperclip-text-light-color: #666; /* 灰色文字 */
+  --paperclip-border-color: #e0e0e0; /* 边框色 */
+  --paperclip-success-color: #28a745; /* 成功状态色 */
+  --paperclip-error-color: #dc3545; /* 错误状态色 */
+  --paperclip-warning-color: #ffc107; /* 警告状态色 */
+  
+  /* 字体 */
+  --paperclip-font-family: 'Arial', sans-serif; /* 主字体 */
+  --paperclip-font-family-secondary: 'Helvetica', sans-serif; /* 副字体 */
+  --paperclip-font-size-base: 14px; /* 基础字体大小 */
+  --paperclip-font-size-large: 18px; /* 大字体大小 */
+  --paperclip-font-size-small: 12px; /* 小字体大小 */
+  --paperclip-line-height-base: 1.5; /* 行高 */
+  
+  /* 间距 */
+  --paperclip-space-xs: 4px; /* 小间距 */
+  --paperclip-space-sm: 8px; /* 小间距 */
+  --paperclip-space-md: 16px; /* 中等间距 */
+  --paperclip-space-lg: 32px; /* 大间距 */
+  --paperclip-space-xl: 64px; /* 超大间距 */
+  
+  /* 尺寸 */
+  --paperclip-btn-height: 40px; /* 按钮高度 */
+  --paperclip-input-height: 36px; /* 输入框高度 */
+  --paperclip-card-width: 300px; /* 卡片宽度 */
+  --paperclip-card-height: 200px; /* 卡片高度 */
+  --paperclip-avatar-size: 40px; /* 头像尺寸 */
+  
+  /* 阴影 */
+  --paperclip-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+  --paperclip-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15); /* 中等阴影 */
+  --paperclip-shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2); /* 强烈阴影 */
+  
+  /* 透明度 */
+  --paperclip-opacity-hover: 0.8; /* 鼠标悬浮透明度 */
+  --paperclip-opacity-disabled: 0.5; /* 禁用状态透明度 */
+  
+  /* 边框 */
+  --paperclip-border-radius: 4px; /* 默认圆角 */
+  --paperclip-border-radius-sm: 2px; /* 小圆角 */
+  --paperclip-border-radius-lg: 8px; /* 大圆角 */
+  --paperclip-border-width: 1px; /* 边框宽度 */
+  
+  /* 响应式设计 */
+  --paperclip-breakpoint-xs: 480px; /* 小屏幕 */
+  --paperclip-breakpoint-sm: 768px; /* 中等屏幕 */
+  --paperclip-breakpoint-md: 1024px; /* 大屏幕 */
+  --paperclip-breakpoint-lg: 1200px; /* 超大屏幕 */
+  
+  /* 按钮 */
+  --paperclip-btn-primary-bg: var(--paperclip-primary-color); /* 主按钮背景 */
+  --paperclip-btn-primary-text: #fff; /* 主按钮文字色 */
+  --paperclip-btn-secondary-bg: var(--paperclip-secondary-color); /* 次按钮背景 */
+  --paperclip-btn-secondary-text: #fff; /* 次按钮文字色 */
+  --paperclip-btn-disabled-bg: #dcdcdc; /* 禁用按钮背景 */
+  --paperclip-btn-disabled-text: #9e9e9e; /* 禁用按钮文字色 */
+  
+  /* 动画与过渡 */
+  --paperclip-transition-speed: 0.3s; /* 过渡速度 */
+  --paperclip-transition-ease: cubic-bezier(0.25, 0.8, 0.25, 1); /* 过渡函数 */
+  --paperclip-fade-in: fade-in 0.3s ease-out; /* 渐显动画 */
+  --paperclip-fade-out: fade-out 0.3s ease-out; /* 渐隐动画 */
+
+  /* 头部 */
+  --paperclip-header-icon-size: 24px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paperclip-bg-color: #121212;
+    --paperclip-text-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --paperclip-bg-color: #fff;
+    --paperclip-text-color: #333;
+  }
+}
