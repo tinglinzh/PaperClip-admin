@@ -9,4 +9,9 @@ export default antfu(
     },
   },
   ...tailwind.configs['flat/recommended'],
+  {
+    rules: {
+      'tailwindcss/no-custom-classname': 'off',
+    },
+  },
 )
