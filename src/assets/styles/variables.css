@@ -68,7 +68,7 @@
   --paperclip-fade-out: fade-out 0.3s ease-out; /* 渐隐动画 */
 
   /* 头部 */
-  --paperclip-header-icon-size: 24px;
+  --paperclip-header-icon-size: 20px;
 }
 
 @keyframes fade-in {

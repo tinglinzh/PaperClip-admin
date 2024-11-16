@@ -5,22 +5,24 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons'
-import { Icon } from '@iconify/react'
-import { Button, Layout, Menu, theme } from 'antd'
+import { Layout, Menu, theme } from 'antd'
 import React, { useState } from 'react'
-import SideTop from './components/side/sideTop'
+import PaperClipHeader from './header'
+import SideTop from './side/components/sideTop'
 
-const { Header, Sider, Content } = Layout
+const { Sider, Content } = Layout
 
 const HomeLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
-
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed)
+  }
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed} className="shadow-[2px_0_8px_0_rgb(29,35,41,0.05);]">
+      <Sider trigger={null} theme="light" collapsible collapsed={collapsed} className="shadow-[2px_0_8px_0_rgb(29,35,41,0.05);]">
         <SideTop collapsed={collapsed} />
         <Menu
           mode="inline"
@@ -46,22 +48,7 @@ const HomeLayout: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ background: colorBgContainer }} className="flex items-center px-6">
-          <Button
-            type="text"
-            icon={collapsed
-              ? (
-                  <Icon icon="line-md:menu-fold-right" key="menu-fold-right" />
-                )
-              : (
-                  <Icon icon="line-md:menu-fold-left" key="menu-fold-left" />
-                )}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: `var(--paperclip-header-icon-size)`,
-            }}
-          />
-        </Header>
+        <PaperClipHeader collapsed={collapsed} setCollapsed={toggleCollapsed} />
         <Content
           style={{
             margin: '24px 16px',
