@@ -18,7 +18,6 @@ import {
   setAlpha,
 } from '@ant-design/pro-components'
 import { message, Space, Tabs, theme } from 'antd'
-import { useEffect, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { CSSTransition } from 'react-transition-group'

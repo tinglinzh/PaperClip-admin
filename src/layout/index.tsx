@@ -1,12 +1,9 @@
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons'
 import { Layout, Menu, theme } from 'antd'
-import React, { useState } from 'react'
 import PaperClipHeader from './header'
 import SideTop from './side/components/sideTop'
 

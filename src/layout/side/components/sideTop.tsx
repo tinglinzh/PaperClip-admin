@@ -1,6 +1,5 @@
 import paperclipIcon from '@/assets/images/paperclip.png'
 import { theme } from 'antd'
-import { useTranslation } from 'react-i18next'
 
 // 定义子组件的 props 类型
 interface SideTopProps {

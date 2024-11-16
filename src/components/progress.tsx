@@ -1,6 +1,5 @@
 import nProgress from 'nprogress'
 
-import React, { Fragment, useEffect } from 'react'
 import './progress.css'
 
 const NProgress: React.FC = () => {
