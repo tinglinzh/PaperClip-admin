@@ -22,6 +22,6 @@
     "skipLibCheck": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "./auto-imports.d.ts"]
 
 }
