@@ -15,7 +15,7 @@ export function initI18n() {
       escapeValue: false,
     },
     detection: {
-      order: ['navigator'],
+      order: ['localStorage', 'navigator'],
     },
   })
 }
