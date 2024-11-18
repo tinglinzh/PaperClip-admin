@@ -20,6 +20,10 @@ const systemTheme: ThemeConfig = {
     Button: {
       onlyIconSize: 20,
     },
+    Tabs: {
+      horizontalMargin: '10px 0 0',
+      cardBg: 'transparent',
+    },
   },
 }
 export default function App() {

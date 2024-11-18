@@ -4,17 +4,17 @@ import { Breadcrumb, Button, theme } from 'antd'
 import { Header } from 'antd/es/layout/layout'
 import HeaderRight from './components/right'
 
-interface PaperClipHeaderProps {
+interface PaperclipHeaderProps {
   collapsed: boolean
   setCollapsed: () => void // 回调函数类型，更新collapsed状态
 
 }
-export default function PaperClipHeader({ collapsed, setCollapsed }: PaperClipHeaderProps) {
+export default function PaperclipHeader({ collapsed, setCollapsed }: PaperclipHeaderProps) {
   const {
     token: { colorBgContainer },
   } = theme.useToken()
   return (
-    <Header style={{ background: colorBgContainer }} className="flex items-center px-6">
+    <Header style={{ background: colorBgContainer }} className="flex items-center px-6 ">
       <Button
         type="text"
         icon={collapsed

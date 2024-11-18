@@ -7,11 +7,27 @@
 #root,body,html {
   height: 100%;
 }
-
+#nprogress .bar {
+  background:#6560FE !important; 
+}
 .ant-layout {
   display: flex;
   width: 100%;
   min-height: 100%;
+}
+
+.paperclip-tabs{
+  .ant-tabs-nav::before{
+    border: none;
+  }
+ .ant-tabs-nav{
+.ant-tabs-tab{
+    border: none;
+  }
+  .ant-tabs-tab-active{
+    background-color: var(--paperclip-bg-activecolor);
+  }
+ } 
 }
 body {
      font-family:

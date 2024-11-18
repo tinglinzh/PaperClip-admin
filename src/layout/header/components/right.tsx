@@ -20,7 +20,7 @@ export default function HeaderRight() {
   }
 
   return (
-    <div className="ml-auto flex items-center gap-4 pr-4">
+    <div className="ml-auto flex items-center gap-4">
       <Button
         type="text"
         onClick={toggleFullscreen}

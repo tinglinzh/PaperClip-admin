@@ -4,15 +4,16 @@ import {
   VideoCameraOutlined,
 } from '@ant-design/icons'
 import { Layout, Menu, theme } from 'antd'
-import PaperClipHeader from './header'
+import PaperclipHeader from './header'
 import SideTop from './side/components/sideTop'
+import PaperclipTabbar from './tabbar/index'
 
 const { Sider, Content } = Layout
 
 const HomeLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { colorBgContainer },
   } = theme.useToken()
   const toggleCollapsed = () => {
     setCollapsed(!collapsed)
@@ -45,13 +46,12 @@ const HomeLayout: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <PaperClipHeader collapsed={collapsed} setCollapsed={toggleCollapsed} />
+        <PaperclipHeader collapsed={collapsed} setCollapsed={toggleCollapsed} />
+        <PaperclipTabbar />
         <Content
           style={{
-            margin: '24px 16px',
             padding: 24,
             background: colorBgContainer,
-            borderRadius: borderRadiusLG,
           }}
         >
           Content

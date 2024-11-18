@@ -3,6 +3,7 @@ import nProgress from 'nprogress'
 import './progress.css'
 
 const NProgress: React.FC = () => {
+  nProgress.configure({ showSpinner: false })
   useEffect(() => {
     nProgress.start()
     return () => {
